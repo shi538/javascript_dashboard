@@ -5,8 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h2>Amazing images</h2>
+    <div>
+        <ul class = "images">
+              <li><img src="https://www.pexels.com/photo/colorful-waterfront-houses-in-martigues-france-32486328/" alt="house" class="house"></li>
+            <li><img src="https://images.pexels.com/photos/33760395/pexels-photo-33760395.jpeg" alt="river" class="river"></li>
+            <li><img src="https://www.pexels.com/photo/blooming-magnolia-trees-against-a-clear-sky-31487010/" alt="tree" class="tree"></li>
+            <li><img src="https://www.pexels.com/photo/barbary-macaques-in-gibraltar-s-natural-habitat-32444035/" alt="monkey" class="monkey"></li>
+            <li><img src="https://www.pexels.com/photo/scenic-mountain-view-from-rustic-window-33361636/" alt="window" class="widow"></li>
+            <li><img src="https://www.pexels.com/photo/elegant-pink-tulips-in-glass-vase-still-life-31067697/" alt="flower" class="flower"></li>
+            <li><img src="https://www.pexels.com/photo/vibrant-indian-peacock-displaying-feathers-33668617/" alt="peacock" class="peacock"></li>
+            <li><img src="https://www.pexels.com/photo/blue-canoe-pulled-on-the-river-bank-17806032/" alt="boat" class="boat" ></li>
+            <a href="http://google.com" class="google">Google</a>
+        </ul>
+    </div>
 </body>
+<script>
+    //attachEvent -oldtime
+//jQuery -on
+//++++++Event discussion ++++++++++++++++++++
+//type, timestamp, defaultPrevent
+//target, toElement, currentTarget
+//clientX, ctrlKey, shiftKey, KeyCode
+
+
+   // This mode is capturing mode 
+   //this flow is top to buttom
+
+// document.querySelector('.images').addEventListener('click',(e)=>{
+//    console.log("clicked inside the ul");
+   
+// },true) 
+//  when i written the true in this section this bahaviour is first  behaviour is clickeed inside the ul and then print the housewas clicked
+// document.querySelector('.house').addEventListener('click',(e)=>{
+//   console.log("house was clicked");
+  
+// },true)
+
+                            //+++++++++++++bubling mode ++++++++++++
+//++++++++++++++++++++++++this flow is bottom to top+++++++++++++++
+// document.querySelector('.house').addEventListener('click',(e)=>{
+//   console.log("house was clicked");
+//   e.stopPropagation();//this method is stop the bubling  event is not go to the  bottom to top
+// },false);
+
+// document.querySelector('.images').addEventListener('click',(e)=>{
+//    console.log("clicked inside the ul");
+   
+// },false) 
+ document.querySelector('.google').addEventListener('click',(event)=>{
+    // e.defaultPrevented();
+    event.preventDefault();
+    //  event.stopPropagation();
+    // console.log("google clicked")
+ },false)
+
+
+document.querySelector('.images').addEventListener('click',(event)=>{
+  console.log(event.target.parentNode)
+  if(event.target.tagName === 'IMG'){
+    console.log(event.target.tagName)
+  let removeIt = event.target.parentNode;
+  removeIt.remove()
+  }
+  //removeIt.parentNode.removeChild(removeIt)
+})
+
+</script>
 </html>

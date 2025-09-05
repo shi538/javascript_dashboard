@@ -41,8 +41,7 @@ function ValidGuess(guess){
            displayMessage(`Game Over. Random number is ${randomNumber}`);
            endGame();
         }else{
-        prvGuess.push(guess);
-
+            prvGuess.push(guess);
             displayGuess(guess);
             chackGuess(guess);
         }
