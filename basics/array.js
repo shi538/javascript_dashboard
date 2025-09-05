@@ -8,6 +8,7 @@ const myArr=[3,4,6,77,4];
 
 // Array method
 
+
 // myArr.push(5);
 // myArr.push(6);
 // myArr.push(6);
@@ -21,7 +22,7 @@ const myArr=[3,4,6,77,4];
 // console.log(myArr);
 // myArr.push(5);
 // console.log(myArr);
-
+//
 
 // console.log(myArr.includes(77))
 // const newArr=myArr.join();
