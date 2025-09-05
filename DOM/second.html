@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color:blanchedalmond";>
+    <div class="parent">
+     <div class="day">Monday</div>
+     <div class="day">Tuesday</div>
+     <div class="day">Wednesday</div>
+     <div class="day">Thrusday</div>
+     <div class="day">Friday</div>
+    </div>
+     <div class="day">Monday</div>
+
+    <script>
+        const parent = document.querySelector('.parent')
+        // console.log(parent)
+        console.log(parent.children)//this take a  HTML collection
+
+        // const allElement = parent.querySelectorAll('div'); 
+
+        // //When i select the element for the attribute this take a nodelist and select the all elemnt for the className this take the HTML colllection 
+
+        //document.getElementsByClassName('list-item')
+
+        // // console.log(allElement);
+        // console.log(parent.children[1].innerHTML);
+    
+        //When the consolee is takethe HTML collection 
+        for (let index = 0; index < parent.children.length; index++) {
+
+            // console.log(parent.children[index].innerHTML);
+            
+        }
+        //  console.log(parent.firstElementChild)
+        const days = parent.querySelectorAll('.day')
+        console.log(days)
+
+        const dayOne =document.querySelector('.day');
+
+        console.log(dayOne)
+        console.log(dayOne.parentElement);
+        console.log(dayOne.nextElementSibling)
+
+        console.log(parent.childNodes);
+        //this take the many rypeof nodes 
+        //1. text nodes → spaces, newlines, or actual text between elements.
+
+        // Every gap, line break, or literal text inside the parent becomes a text node.
+
+        // Even just pressing Enter in HTML creates a text node ("\n ").
+
+        // 2. div.day nodes → actual <div class="day">...</div> elements inside.
+
+        // So the DOM tree keeps everything:
+
+        // Elements (<div>, <p>, etc.)
+
+        // Text (spaces, line breaks, characters)
+
+        // Comments
+    
+ 
+    </script>
+</body>
+
+</html>
