@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="paragraph">Hai</h1>
+    <button class="startbutton">Start</button>
+    <button class="stopbutton">Stop</button>
+  </body>
+  <script>
+    //Basic introduction of the settimeout function  and clear time out function
+    // let changeMe;
+    // const startbutton = document.querySelector(".startbutton");
+    // const stopbutton = document.querySelector(".stopbutton");
+
+    // function edittext() {
+    //   document.querySelector("h1").innerHTML = "shivam";
+    // }
+
+    // const changeId = function () {
+    //   changeMe = setTimeout(edittext, 2000);
+    // };
+    // startbutton.addEventListener("click", changeId);
+
+    // stopbutton.addEventListener("click", function () {
+    //   clearTimeout(changeMe);
+    //   console.log("stopped");
+    // });
+      
+    const startbutton = document.querySelector(".startbutton");
+    const stopbutton = document.querySelector(".stopbutton");
+    let changeMe;
+    const sayName =function(){
+         let date = new Date();
+        let result  = date.toLocaleTimeString();
+        console.log("shivam",result);
+    }
+   const changeId = function(){
+    changeMe = setInterval(sayName,1000);
+   }
+   startbutton.addEventListener('click',changeId)
+
+     
+    const stopInterval = function(){
+        clearInterval(changeMe);
+        console.log("stop interbal")
+    }
+    stopbutton.addEventListener('click',stopInterval)
+
+
+  </script>
+</html>
+
