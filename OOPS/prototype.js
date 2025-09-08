@@ -69,24 +69,14 @@ let anotherUserName = "shiavm    ";
 let myName = "Shiavm Gaur   ";
 
 String.prototype.trueLenght = function () {
-    // console.log(`${this}`)
-    // console.log(`True Lenght is ${this.trim().length}`)
+    console.log(`${this}`)
+    console.log(`True Lenght is ${this.trim().length}`)
 }
 
 anotherUserName.trueLenght()
-// myName.trueLenght()
+myName.trueLenght()
 "hitesh".trueLenght()
 
 // ++++++++++++++++jis na call kiya vahi (this) hai////////////////
 
 
-const chai = ()=>{
-    console.log(`${this}`);
-    
-}
- function shivam(){
-    console.log(`${this}`)
- }
-
- chai();
- shivam()
