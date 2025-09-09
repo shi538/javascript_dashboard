@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+    <buttom id="orange">Oreange</buttom>
+    <buttom id="green">Green</buttom>
+
+</body>
+<script>
+    //Lexical  Scopping
+    
+    // function Outer(){
+    //     let Username = "shivam";
+    //     //This is called a Lexical scopping  this means outer variable is access the inner loop
+    //     function inner(){
+    //         console.log(`Inner function is called and Username Is: ${Username}`)
+    //     }
+    //     inner()
+    // }
+    // Outer();
+    //real Example of closure 
+
+      function clickHandler(color){
+
+        return function(){
+           document.body.style.backgroundColor =`${color}`  
+        }
+
+      }
+        document.getElementById('orange').onclick = clickHandler("orange");
+        
+        document.getElementById('green').onclick = clickHandler("green")
+
+
+</script>
+</html>
