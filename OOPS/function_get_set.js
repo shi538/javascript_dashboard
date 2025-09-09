@@ -1,7 +1,4 @@
-function User(email, password) {  
-    this.email = email;
-    this.password = password;
-
+function User(email, password) {
     Object.defineProperty(this, 'email', {
         get: function () {
             return this._email.toUpperCase();
@@ -12,6 +9,8 @@ function User(email, password) {
     });
 
     // now setter works
+    this.email = email;
+    this.password = password;
 }
 
 const chai = new User("shia@234", "123");
